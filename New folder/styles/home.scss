@@ -1,0 +1,246 @@
+body {
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  background-color: #333;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid #fff;
+  width: 150px;
+  height: 30px;
+  padding: 10px;
+  border-radius: 0px 12px 0px 12px;
+}
+
+.logo h2 {
+  font-size: 20px;
+}
+.logo i {
+  color: #e9a530;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.info a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: "Noto Sans Georgian", serif;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.info a:hover {
+  color: #e9a530;
+}
+
+.but {
+  display: flex;
+  justify-content: center;
+}
+
+.info button {
+  background-color: #e9a530;
+  border: none;
+  padding: 13px;
+  color: #000;
+  cursor: pointer;
+  border-radius: 12px 0px 12px 0px;
+  font-family: "Noto Sans Georgian", serif;
+  font-weight: 700;
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: 300ms;
+}
+
+.burger-icon {
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10000;
+  display: none;
+}
+
+.bar {
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-title {
+  border: 5px solid #e9a530;
+  max-width: 100%;
+  width: 75%;
+  height: 70%;
+  border-radius: 50px 0px 50px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  animation: floatBounce 3s ease-in-out infinite;
+}
+
+.title h1 {
+  width: 100%;
+  font-size: clamp(24px, 5vw, 60px);
+  margin-bottom: 0;
+  font-weight: 800;
+  font-family: "Noto Sans Georgian", serif;
+  animation: pulseGlow 3s infinite ease-in-out;
+}
+
+.title p {
+  font-family: "Noto Sans Georgian", serif;
+  font-weight: 700;
+  font-size: clamp(12px, 3vw, 20px);
+}
+
+.geo {
+  color: #e9a530;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.buttons a {
+  text-decoration: none;
+}
+
+.first {
+  padding: 10px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Noto Sans Georgian", serif;
+  border-radius: 10px 0px 10px 0px;
+  border: none;
+  background-color: #e9a530;
+  color: #000000;
+  font-weight: 700;
+  transition: 300ms;
+  cursor: pointer;
+}
+
+.first:hover {
+  background-color: transparent;
+  border: 1px solid #e9a530;
+  color: #fff;
+}
+
+.second {
+  padding: 10px;
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Noto Sans Georgian", serif;
+  border-radius: 10px 0px 10px 0px;
+  border: none;
+  background-color: #e9a530;
+  color: #000000;
+  font-weight: 700;
+  transition: 300ms;
+  cursor: pointer;
+}
+
+.second:hover {
+  background-color: transparent;
+  border: 1px solid #e9a530;
+  color: #fff;
+}
+
+@keyframes floatBounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .burger-icon {
+    display: block;
+  }
+  .navbar {
+    height: 100vh;
+    position: absolute;
+    width: 300px;
+    transition: 300ms;
+    position: fixed;
+    transform: translateX(-100%);
+  }
+
+  .logo {
+    position: fixed;
+    top: 30px;
+  }
+  .nav-container {
+    flex-direction: column;
+  }
+
+  .info {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .info a {
+    font-size: 20px;
+  }
+  .navbar.open {
+    transform: translateX(0);
+  }
+}

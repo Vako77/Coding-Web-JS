@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>კოდის-ედიტორი</title>
+    <link rel="icon" href="./../images/69-512.webp" />
+    <link rel="stylesheet" href="./../styles/home.css">
+    <link rel="stylesheet" href="./../styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <h3>კოდერი</h3>
+          <i class="bi bi-code-slash"></i>
+        </div>
+        <div class="info">
+          <a href="home.html">მთავარი</a>
+          <a href="l">კოდის წერა</a>
+          <a href="json.html">სახეობები</a>
+          <a href="tags.html">თეგები</a>
+          <div class="info-but">
+            <a href="account.html"><button>აქაუნთი</button></a>
+          </div>
+          <div class="but">
+            <button class="click" id="showBtn">შედეგი</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="burger-icon">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+
+
+
+    <main class="main">
+      <div class="editor-container">
+        <div class="one-container">
+          <div id="html-editor" class="editor"></div>
+          <div id="css-editor" class="editor"></div>
+        </div>
+        <div class="two-container">
+          <div id="js-editor" class="editor"></div>
+        </div>
+      </div>
+    </main>
+
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <iframe id="popup-iframe"></iframe>
+        <button id="closeBtn">დახურვა</button>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.43.0/min/vs/loader.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./../scripts/home.js"></script>
+    <script src="./../scripts/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,223 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+  background-color: #1e1f1f;
+}
+
+.reg-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border: 3px solid #e9a530;
+  padding: 5%;
+  max-width: 500px;
+  width: 90%;
+  border-radius: 30px 0px 30px 0px;
+  box-shadow: 0px 4px 20px #0000001a;
+  font-weight: 600;
+  position: relative;
+  z-index: 9999;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  font-family: "Noto Sans Georgian", serif;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 5vw, 2.4rem);
+  text-align: center;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+form {
+  width: 100%;
+}
+
+.reg-card .input {
+  width: 100%;
+  gap: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.reg-card .input label {
+  color: #fff;
+}
+
+.reg-card input,
+.reg-card button {
+  border-radius: 10px;
+  font-family: "Noto Sans Georgian", sans-serif;
+  font-weight: 600;
+}
+
+.reg-card input {
+  width: 95%;
+  padding: 15px;
+  outline: none;
+  border: 1px solid #e9a530;
+  color: #fff;
+  background-color: #1e1f1f;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.reg-card .error {
+  color: #ffffff;
+}
+.reg-card input:focus {
+  border-color: #ffae42;
+  box-shadow: 0px 0px 8px rgba(255, 174, 66, 0.5);
+}
+
+.reg-card button {
+  width: 100%;
+  padding: clamp(10px, 2%, 15px);
+  background: #e9a530;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 20px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.reg-card button:hover {
+  background: #ffae42;
+  transform: scale(1.02);
+}
+
+@media screen and (max-width: 641px) {
+  .reg-card {
+    width: 70%;
+  }
+
+  .reg-card input {
+    width: 92%;
+  }
+}
+
+.reg-card.hidden {
+  opacity: 0;
+  transform: scale(0.8);
+  pointer-events: none;
+  visibility: hidden;
+}
+
+#cameraContainer {
+  display: flex;
+  position: fixed;
+  top: 15%;
+  left: 15%;
+  width: 70vw;
+  height: 70vh;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#cameraContainer.active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+#video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1000;
+}
+
+.crosshair {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+}
+
+.horizontal-line,
+.vertical-line {
+  position: absolute;
+  background-color: #fff;
+}
+
+.horizontal-line {
+  width: 80px;
+  height: 2px;
+}
+
+.vertical-line {
+  height: 80px;
+  width: 2px;
+}
+
+.success-message {
+  background-color: #1e1f1f;
+  max-width: 100%;
+  width: 700px;
+  height: 40px;
+  border-radius: 15px 0px 15px 0px;
+  position: fixed;
+  top: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2px solid orange;
+  padding: 22px;
+  text-align: center;
+  z-index: 10000;
+  opacity: 0;
+  visibility: hidden;
+  transition: 300ms;
+}
+
+.success-message p {
+  text-align: center;
+  color: #fff;
+  font-size: 17px;
+  font-family: "Noto Sans Georgian", serif;
+  margin: 0;
+  font-weight: 600;
+}
+.succes-button {
+  display: flex;
+  justify-content: end;
+}
+
+.success-message .succes-button button {
+  width: 100px;
+  border-radius: 5px 0px 5px 0px;
+  background-color: orange;
+  border: none;
+  color: #ffffff;
+  padding: 6px;
+  cursor: pointer;
+  font-family: "Noto Sans Georgian", serif;
+  font-weight: 600;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.success-message.active {
+  top: 2%;
+  opacity: 1;
+  visibility: visible;
+}

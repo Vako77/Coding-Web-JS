@@ -1,0 +1,61 @@
+.tables {
+  margin-top: 40px;
+  margin-left: 20px;
+  animation: table 2s ease-in-out 1;
+}
+@keyframes table {
+  0%{transform: translateY(30px);}
+  100%{transform: translateY(0);}
+}
+.tables h1 {
+  font-weight: 500;
+  font-family: "Noto Sans Georgian", serif;
+  animation: title 2s ease-in-out 1;
+}
+@keyframes title {
+  0%{transform: translateX(-100%);}
+  100%{transform: translateX(0);}
+}
+table {
+  width: 60%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-family: "Noto Sans Georgian", serif;
+  font-weight: 600;
+}
+
+table th:first-child {
+  border-right: 1px solid #fff;
+}
+
+table th,
+table td {
+  padding: 12px 15px;
+  text-align: start;
+}
+
+table th {
+  color: #fff;
+  font-weight: bold;
+}
+
+table tr:nth-child(even) {
+  background-color: #333;
+}
+
+table td {
+  border-bottom: 1px solid #e9a530;
+}
+
+table td:first-child {
+  border-right: 1px solid #fff;
+}
+
+caption {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #555;
+  text-align: center;
+}
